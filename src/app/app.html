@@ -1,8 +1,10 @@
-<header>
-  <nav>
-    <ul>
-      @for (link of links; track link.path){
-        <a [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      @for (link of links; track link.path) {
+        <li>
+          <a [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a>
+        </li>
       }
     </ul>
   </nav>
